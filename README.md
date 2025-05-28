@@ -63,7 +63,7 @@ Run the main notebook or script to generate forecasts and visualizations. Output
 python energy_forecast_arima.py
 
 
-Notes
+## Notes
 The script overwrites output files on each run — avoiding duplicate or accumulating data.
 
 The folder and files are structured for easy integration with Git, Power BI, and Azure.
