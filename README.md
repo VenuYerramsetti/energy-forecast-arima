@@ -1,82 +1,141 @@
-# Energy Consumption Forecasting with ARIMA
+# ⚡ Energy Consumption Forecasting with ARIMA + Power BI + Azure
 
-## Project Overview
-This project focuses on forecasting monthly energy consumption using seasonal ARIMA models with automated parameter tuning.
-
----
-
-## Features
-
-- Data preprocessing and visualization  
-- Auto ARIMA model selection with pmdarima  
-- Forecast generation with confidence intervals  
-- Historical and forecast plot visualizations  
-- Exporting results for Power BI integration  
-- Designed for Azure cloud automation and smooth Git integration  
-
-Additionally, the repository includes other data science projects like stock price forecasting, customer complaint NLP classification, university admission prediction, and data pipeline automation — demonstrating a wide range of machine learning and data engineering skills.
+Predict monthly energy consumption using advanced time series modeling, visualized beautifully in **Power BI**, and ready for **Azure** automation.
 
 ---
 
-## Contents
-- Data loading and preprocessing  
-- Time series visualization  
-- Seasonal ARIMA modeling and forecasting  
-- Forecast result export  
-- Visualization saving  
-- Folder management for outputs  
+## 📌 Overview
+
+This project forecasts monthly energy usage using **Seasonal ARIMA (SARIMA)** models with automated hyperparameter tuning via `pmdarima`. The results are exported, visualized in Power BI, and structured to enable easy deployment to Azure for end-to-end automation.
 
 ---
 
-## Folder Structure
+## 🚀 Features
 
-All output files (CSVs + PNG plots) are saved in:
-
-C:\Users\venum\energy-forecast-arima\
-
-
-with these files:
-
-- `energy_original.csv` — Historical data
-- `energy_forecast.csv` — Forecasted values + confidence intervals
-- `energy_combined.csv` — Historical + forecast combined (Power BI/Azure ready)
-- `energy_original_plot.png` — Plot of historical data
-- `energy_forecast_plot.png` — Plot of forecast + confidence intervals
+- ✅ **Time Series Forecasting** with Seasonal ARIMA
+- 📈 Historical vs Forecast plots
+- 📊 Power BI dashboard with:
+  - Line chart (Historical + Forecast)
+  - Table of forecast with confidence intervals
+  - Interactive date slicer
+  - Source card (data attribution)
+- 💾 Auto-export of forecast results to CSV
+- ☁️ Azure-ready structure
+- 🔄 Seamless Git integration
 
 ---
 
-## Setup Instructions
+## 🧠 Technologies Used
 
-### Requirements
-- Python 3.8+  
-- pandas  
-- matplotlib  
-- pmdarima  
-
-Use `pip install -r requirements.txt` to install dependencies.
+| Area | Tool |
+|------|------|
+| Forecasting | Python, pmdarima |
+| Data Wrangling | pandas |
+| Visualization | matplotlib, Power BI |
+| Deployment Ready | Azure-compatible output |
+| Version Control | Git + GitHub |
 
 ---
 
-## Usage
-Run the main notebook or script to generate forecasts and visualizations. Outputs are saved in timestamped folders under the `output` directory to avoid overwriting previous runs.
+## 📂 File Outputs
 
+After running the script:
+
+```bash
+📁 energy-forecast-arima/
+├── energy_forecast.csv         # Combined forecast + historical
+├── forecast_only.csv           # Forecasted values only
+├── original_energy_data.csv    # Original dataset
+├── energy_forecast_plot.png    # Forecast plot (with CI)
+├── original_energy_consumption.png  # Historical plot
+└── energy_forecast.pbix        # Power BI Dashboard
+
+---
+
+## 📊 Power BI Dashboard Features
+
+🔷 Line Chart: Historical and forecast consumption
+
+📅 Slicer: Filter data by date (dropdown or between)
+
+📋 Table: Forecasted values + Lower/Upper confidence intervals
+
+🧾 Source Note: Indicates the data comes from Python preprocessing
+
+---
+
+## 🛠️ Setup Instructions
+
+📦 Requirements
+Ensure Python 3.8+ and install dependencies:
+
+
+```bash
+pip install -r requirements.txt
+
+▶️ Run Script
+
+```bash
 python energy_forecast_arima.py
 
 
-## Notes
-The script overwrites output files on each run — avoiding duplicate or accumulating data.
+---
 
-The folder and files are structured for easy integration with Git, Power BI, and Azure.
+## ☁️ Azure Integration
 
-Plots are saved as PNG files and displayed during runtime for quick visualization.
+Outputs are structured for Azure Blob/Storage upload
 
+Can be used as an automated pipeline via Azure Functions or Logic Apps
+
+Future support: connect Power BI directly to Azure Blob + refresh
 
 ---
 
-## Contribution
-Feel free to fork, submit issues, or create pull requests.
+## 💡 Notes
+
+The script overwrites outputs on each run to avoid clutter
+
+Power BI file (.pbix) reads directly from energy_forecast.csv
+
+Use Git for version tracking and Azure for cloud automation
 
 ---
 
-## License
+## 🤝 Contribution
+
+Pull requests and ideas welcome! If this helps your workflow, star ⭐ the repo.
+
+---
+
+## 🪪 License
+
 MIT License
+
+
+## 🧾 Git Commands to Replace + Push Everything
+
+Make sure you’re in the project root (`energy-forecast-arima/`) and all new files (Power BI, CSVs, updated Python scripts, etc.) are ready.
+
+### ✅ Bash Commands:
+
+```bash
+# Optional: Clean old tracked files that should now be ignored
+git rm -r --cached output/
+
+# Pull latest changes in case others have pushed
+git pull origin main
+
+# Add all updated and new files
+git add .
+
+# Commit with a clear message
+git commit -m "🔄 Updated forecasting script, Power BI file, and CSV outputs"
+
+# Push to remote GitHub repo
+git push origin main
+
+
+---
+
+
+

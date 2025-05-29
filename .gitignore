@@ -1,12 +1,29 @@
-# Byte-compiled / optimized / DLL files 
-__pycache__/ 
-*.py[cod] 
-*.so 
-# Virtual environment 
-venv/ 
-# Jupyter Notebook checkpoints 
-.ipynb_checkpoints 
-# VS Code settings 
-.vscode/ 
-# Output data and plots 
-output/ 
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# Ignore all outputs unless specified
+# (Remove these if you want CSVs and plots tracked)
+output/
+
+# If tracking key CSVs/plots inside output/, un-ignore them
+!output/energy_forecast.csv
+!output/original_energy_data.csv
+!output/forecast_only.csv
+!output/energy_forecast_plot.png
+
+# Power BI autosave files
+*.pbix~
+
+# Environment variables
+.env
