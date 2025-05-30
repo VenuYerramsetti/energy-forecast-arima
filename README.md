@@ -96,6 +96,18 @@ Can be used as an automated pipeline via Azure Functions or Logic Apps
 
 Future support: connect Power BI directly to Azure Blob + refresh
 
+
+---
+
+## ☁️ Azure Machine Learning Deployment
+
+This project was successfully tested on Azure ML using:
+
+- Workspace: `energy-ml-ws`
+- Compute instance: `cpu-instance`
+- Environment: `arima-env` (Python 3.10 + pmdarima)
+- Forecasting script: `energy_forecast_arima.py`
+
 ---
 
 ## 💡 Notes
