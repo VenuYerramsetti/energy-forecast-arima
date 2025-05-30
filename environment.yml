@@ -1,0 +1,14 @@
+name: arima-env
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - pandas
+      - matplotlib
+      - pmdarima
+      - scikit-learn
+      - statsmodels
+      - joblib
+      - azureml-core
+      - azure-ai-ml
+      - azure-identity
