@@ -3,6 +3,8 @@
 ![Last Commit](https://img.shields.io/github/last-commit/VenuYerramsetti/energy-forecast-arima)
 ![Repo Size](https://img.shields.io/github/repo-size/VenuYerramsetti/energy-forecast-arima)
 
+![Dashboard Preview](dashboard_preview.png)
+
 # ⚡ Energy Consumption Forecasting with ARIMA + Power BI + Azure
 
 Predict monthly energy consumption using advanced time series modeling, visualized beautifully in **Power BI**, and ready for **Azure** automation.
