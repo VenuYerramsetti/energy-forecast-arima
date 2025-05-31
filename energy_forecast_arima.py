@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 # Energy Consumption Forecasting with ARIMA
 
 # 📦 Step 1: Import Libraries
@@ -11,8 +8,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pmdarima import auto_arima
 import warnings
+import os
 
 warnings.filterwarnings("ignore")
+
+# 📁 Ensure outputs directory exists
+os.makedirs('outputs', exist_ok=True)
 
 # 📊 Step 2: Load Sample Energy Dataset (monthly data)
 url = 'https://raw.githubusercontent.com/selva86/datasets/master/a10.csv'
@@ -31,11 +32,11 @@ plt.xlabel("Date")
 plt.ylabel("Consumption")
 plt.grid(True)
 plt.legend()
-plt.savefig("original_energy_consumption.png")  # Save plot as PNG
+plt.savefig("outputs/original_energy_consumption.png")  # Save plot as PNG
 plt.show()
 
 # Save original historical data to CSV
-df.to_csv("original_energy_data.csv")
+df.to_csv("outputs/original_energy_data.csv")
 
 # 🧠 Step 4: Auto ARIMA Model Fitting
 model = auto_arima(df['Energy_Consumption'], 
@@ -44,7 +45,9 @@ model = auto_arima(df['Energy_Consumption'],
                    suppress_warnings=True,
                    stepwise=True)
 
-print(model.summary())
+# Save model summary to text file
+with open("outputs/arima_model_summary.txt", "w") as f:
+    f.write(str(model.summary()))
 
 # 📈 Step 5: Forecast Future Values
 n_periods = 12  # Forecast next 12 months
@@ -60,12 +63,12 @@ forecast_df = pd.DataFrame({
     'Forecast': forecast,
     'Lower_CI': conf_int[:, 0],
     'Upper_CI': conf_int[:, 1],
-    'Energy_Consumption': [None]*n_periods  # ← This ensures no misalignment
+    'Energy_Consumption': [None]*n_periods
 })
 forecast_df.set_index('Date', inplace=True)
 
 # Save forecast-only data to CSV
-forecast_df[['Forecast', 'Lower_CI', 'Upper_CI']].to_csv("forecast_only.csv")
+forecast_df[['Forecast', 'Lower_CI', 'Upper_CI']].to_csv("outputs/forecast_only.csv")
 
 # 📊 Step 6: Plot Forecast along with Historical Data
 plt.figure(figsize=(12, 6))
@@ -77,33 +80,24 @@ plt.xlabel("Date")
 plt.ylabel("Consumption")
 plt.legend()
 plt.grid(True)
-plt.savefig("energy_forecast_plot.png")  # Save forecast plot as PNG
+plt.savefig("outputs/energy_forecast_plot.png")  # Save forecast plot as PNG
 plt.show()
 
 # 📝 Step 7: Combine Historical + Forecast Data and Export to CSV
-# Add empty forecast columns to historical data
 df_with_forecast_cols = df.copy()
 df_with_forecast_cols['Forecast'] = None
 df_with_forecast_cols['Lower_CI'] = None
 df_with_forecast_cols['Upper_CI'] = None
 
-# Combine vertically with same column order
 combined_df = pd.concat([df_with_forecast_cols, forecast_df], axis=0)
-
-# Reorder columns for neatness
 combined_df = combined_df[['Energy_Consumption', 'Forecast', 'Lower_CI', 'Upper_CI']]
+combined_df.to_csv("outputs/energy_forecast.csv")
 
-# Export combined data to CSV
-combined_df.to_csv("energy_forecast.csv")
-
-print(" Original data saved as 'original_energy_data.csv'")
-print(" Forecast-only data saved as 'forecast_only.csv'")
-print(" Combined data saved as 'energy_forecast.csv'")
-print(" Plots saved as 'original_energy_consumption.png' and 'energy_forecast_plot.png'")
-
-
-# In[ ]:
-
-
-
-
+# ✔️ Final log message
+print("✅ Output files saved to the 'outputs/' directory:")
+print(" - original_energy_data.csv")
+print(" - forecast_only.csv")
+print(" - energy_forecast.csv")
+print(" - original_energy_consumption.png")
+print(" - energy_forecast_plot.png")
+print(" - arima_model_summary.txt")

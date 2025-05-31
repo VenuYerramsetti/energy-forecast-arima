@@ -1,35 +1,30 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
-# run_forecast_job.py
-
-from azure.ai.ml import MLClient
+from azure.ai.ml import MLClient, command
 from azure.identity import DefaultAzureCredential
-from azure.ai.ml.entities import CommandJob
+from azure.ai.ml.entities import Environment
 
 ml_client = MLClient(
     DefaultAzureCredential(),
-    subscription_id="7db2b459-a548-48f4-a984-f75f5bae5548",  # Replace below
+    subscription_id="7db2b459-a548-48f4-a984-f75f5bae5548",
     resource_group_name="venumadhuri.y-rg",
     workspace_name="energy-ml-ws"
 )
 
-job = CommandJob(
-    code="./",  # directory where energy_forecast_arima.py is located
-    command="python energy_forecast_arima.py",
-    environment="arima-env@latest",
-    compute="arima-instance",  # name of your compute
-    experiment_name="energy-forecast-arima"
+env = Environment(
+    name="arima-env",
+    conda_file="environment.yml",
+    image="mcr.microsoft.com/azureml/base:latest",
+    description="ARIMA forecasting environment"
 )
 
-ml_client.jobs.create_or_update(job)
+env = ml_client.environments.create_or_update(env)
 
+job = command(
+    code="./",
+    command="python energy_forecast_arima.py > output.log 2>&1",
+    environment=f"{env.name}:{env.version}",
+    compute="arima-instance",
+    display_name="arima_forecast_job"
+)
 
-# In[ ]:
-
-
-
-
+created_job = ml_client.jobs.create_or_update(job)
+print(f"Job submitted: {created_job.name}, status: {created_job.status}")

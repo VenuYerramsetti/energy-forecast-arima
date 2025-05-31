@@ -1,0 +1,171 @@
+======Starting Image Build on Serverless Compute======
+The run ID for the image build on serverless compute is imgbldrun_44f3547
+Additional logs for the run: https://ml.azure.com/experiments/id/prepare_image/runs/imgbldrun_44f3547?wsid=/subscriptions/7db2b459-a548-48f4-a984-f75f5bae5548/resourcegroups/venumadhuri.y-rg/workspaces/energy-ml-ws&tid=5c3dfa19-2f6a-46ef-af4e-0b2926618544
+2025-05-30T16:44:07: Logging into Docker registry: b7b312deda7f44b5867e093d778498bd.azurecr.io
+2025-05-30T16:44:07: WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+
+2025-05-30T16:44:07: WARNING! Your credentials are stored unencrypted in '/root/.docker/config.json'.
+2025-05-30T16:44:07: Configure a credential helper to remove this warning. See
+2025-05-30T16:44:07: Login Succeeded
+2025-05-30T16:44:07: https://docs.docker.com/go/credential-store/
+
+
+
+2025-05-30T16:44:07: Running: ['docker', 'build', '-f', 'azureml-environment-setup/Dockerfile', '.', '-t', 'b7b312deda7f44b5867e093d778498bd.azurecr.io/azureml/azureml_d7b5eabf216e7f631ba854da89e012f6', '-t', 'b7b312deda7f44b5867e093d778498bd.azurecr.io/azureml/azureml_d7b5eabf216e7f631ba854da89e012f6:1']
+2025-05-30T16:44:07: #0 building with "default" instance using docker driver
+
+2025-05-30T16:44:07: #1 [internal] load .dockerignore
+2025-05-30T16:44:07: #1 transferring context: 2B done
+2025-05-30T16:44:07: #1 DONE 0.1s
+
+2025-05-30T16:44:07: #2 [internal] load build definition from Dockerfile
+2025-05-30T16:44:07: #2 transferring dockerfile: 1.66kB done
+2025-05-30T16:44:07: #2 DONE 0.1s
+
+2025-05-30T16:44:07: #3 [internal] load metadata for mcr.microsoft.com/azureml/base:latest@sha256:dde960c143b301c9372611607f5d0e8f1e600ab1d40a8f1435090b02990cd51b
+2025-05-30T16:44:08: #3 DONE 0.5s
+
+2025-05-30T16:44:08: #4 [internal] load build context
+2025-05-30T16:44:08: #4 transferring context: 1.38kB done
+2025-05-30T16:44:08: #4 DONE 0.1s
+
+2025-05-30T16:44:08: #5 [ 1/10] FROM mcr.microsoft.com/azureml/base:latest@sha256:dde960c143b301c9372611607f5d0e8f1e600ab1d40a8f1435090b02990cd51b
+2025-05-30T16:44:08: #5 resolve mcr.microsoft.com/azureml/base:latest@sha256:dde960c143b301c9372611607f5d0e8f1e600ab1d40a8f1435090b02990cd51b 0.0s done
+2025-05-30T16:44:08: #5 sha256:dde960c143b301c9372611607f5d0e8f1e600ab1d40a8f1435090b02990cd51b 2.63kB / 2.63kB done
+2025-05-30T16:44:08: #5 sha256:15b2e3b5af7a018eaa8d4dc075131fcfc767833b7f19fc2cfbf4212f331cd31e 8.70kB / 8.70kB done
+2025-05-30T16:44:08: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 0B / 44.12MB 0.2s
+2025-05-30T16:44:08: #5 sha256:49ac0bbe6c8eeb959337b336ceaa5c3bbbae81e316025f9b94ede453540f2377 529B / 529B 0.2s done
+2025-05-30T16:44:08: #5 sha256:d1983a67e104e801fceb1850a375a71fe6b62636ba7a8403d9644f308a6a43f9 0B / 849B 0.2s
+2025-05-30T16:44:08: #5 sha256:d1983a67e104e801fceb1850a375a71fe6b62636ba7a8403d9644f308a6a43f9 849B / 849B 0.3s done
+2025-05-30T16:44:08: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 0B / 95.13MB 0.3s
+2025-05-30T16:44:08: #5 sha256:1a0f3a523f04f61db942018321ae122f90d8e3303e243b005e8de9817daf7028 0B / 169B 0.3s
+2025-05-30T16:44:08: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 8.39MB / 44.12MB 0.5s
+2025-05-30T16:44:08: #5 sha256:1a0f3a523f04f61db942018321ae122f90d8e3303e243b005e8de9817daf7028 169B / 169B 0.4s done
+2025-05-30T16:44:08: #5 sha256:661aa7a3d7b19ff17718f3ba8d0ff219bffdada0edf7d6f5ff166ecc204e2791 0B / 30.44MB 0.5s
+2025-05-30T16:44:08: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 9.44MB / 95.13MB 0.6s
+2025-05-30T16:44:08: #5 sha256:661aa7a3d7b19ff17718f3ba8d0ff219bffdada0edf7d6f5ff166ecc204e2791 19.92MB / 30.44MB 0.6s
+2025-05-30T16:44:09: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 16.78MB / 44.12MB 0.8s
+2025-05-30T16:44:09: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 17.83MB / 95.13MB 0.8s
+2025-05-30T16:44:09: #5 sha256:661aa7a3d7b19ff17718f3ba8d0ff219bffdada0edf7d6f5ff166ecc204e2791 30.44MB / 30.44MB 0.7s done
+2025-05-30T16:44:09: #5 sha256:00f885d273aba1d725369716716ea0f680c442ad151b422f6657b4ca36b0f946 0B / 36.74MB 0.8s
+2025-05-30T16:44:09: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 25.17MB / 44.12MB 1.0s
+2025-05-30T16:44:09: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 26.21MB / 95.13MB 1.0s
+2025-05-30T16:44:09: #5 sha256:00f885d273aba1d725369716716ea0f680c442ad151b422f6657b4ca36b0f946 23.07MB / 36.74MB 1.0s
+2025-05-30T16:44:09: #5 sha256:00f885d273aba1d725369716716ea0f680c442ad151b422f6657b4ca36b0f946 36.74MB / 36.74MB 1.1s
+2025-05-30T16:44:09: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 33.55MB / 44.12MB 1.3s
+2025-05-30T16:44:09: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 38.80MB / 95.13MB 1.3s
+2025-05-30T16:44:09: #5 sha256:00f885d273aba1d725369716716ea0f680c442ad151b422f6657b4ca36b0f946 36.74MB / 36.74MB 1.2s done
+2025-05-30T16:44:09: #5 sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d 0B / 58.06MB 1.3s
+2025-05-30T16:44:09: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 41.94MB / 44.12MB 1.5s
+2025-05-30T16:44:09: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 47.19MB / 95.13MB 1.5s
+2025-05-30T16:44:09: #5 sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d 30.41MB / 58.06MB 1.5s
+2025-05-30T16:44:09: #5 sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d 54.53MB / 58.06MB 1.6s
+2025-05-30T16:44:10: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 60.82MB / 95.13MB 1.8s
+2025-05-30T16:44:10: #5 sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d 58.06MB / 58.06MB 1.8s
+2025-05-30T16:44:10: #5 sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 44.12MB / 44.12MB 1.8s done
+2025-05-30T16:44:10: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 68.16MB / 95.13MB 2.0s
+2025-05-30T16:44:10: #5 extracting sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83
+2025-05-30T16:44:10: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 76.55MB / 95.13MB 2.2s
+2025-05-30T16:44:10: #5 sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d 58.06MB / 58.06MB 2.1s done
+2025-05-30T16:44:10: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 0B / 92.29MB 2.2s
+2025-05-30T16:44:10: #5 sha256:0efe336792bcc951e3a6677f410e0fa7c53c6036fbeef519476ba1f871a5835d 0B / 5.71MB 2.2s
+2025-05-30T16:44:10: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 6.29MB / 92.29MB 2.3s
+2025-05-30T16:44:10: #5 sha256:0efe336792bcc951e3a6677f410e0fa7c53c6036fbeef519476ba1f871a5835d 5.71MB / 5.71MB 2.3s
+2025-05-30T16:44:10: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 83.89MB / 95.13MB 2.4s
+2025-05-30T16:44:10: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 26.21MB / 92.29MB 2.4s
+2025-05-30T16:44:10: #5 sha256:0efe336792bcc951e3a6677f410e0fa7c53c6036fbeef519476ba1f871a5835d 5.71MB / 5.71MB 2.3s done
+2025-05-30T16:44:10: #5 sha256:6c47b4786d87e98c1d6fc9cd683620b86b9433bcba892bbf5f02f9760ec4fc6f 0B / 223.24kB 2.4s
+2025-05-30T16:44:10: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 89.13MB / 95.13MB 2.5s
+2025-05-30T16:44:10: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 47.19MB / 92.29MB 2.5s
+2025-05-30T16:44:10: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 69.21MB / 92.29MB 2.6s
+2025-05-30T16:44:10: #5 sha256:6c47b4786d87e98c1d6fc9cd683620b86b9433bcba892bbf5f02f9760ec4fc6f 223.24kB / 223.24kB 2.5s done
+2025-05-30T16:44:11: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 95.13MB / 95.13MB 2.7s
+2025-05-30T16:44:11: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 91.23MB / 92.29MB 2.7s
+2025-05-30T16:44:11: #5 sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 95.13MB / 95.13MB 3.5s done
+2025-05-30T16:44:11: #5 extracting sha256:3386e6af03b043219225367632569465e5ecd47391d1f99a6d265e51bd463a83 1.6s done
+2025-05-30T16:44:12: #5 sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 92.29MB / 92.29MB 4.1s done
+2025-05-30T16:44:12: #5 extracting sha256:49ac0bbe6c8eeb959337b336ceaa5c3bbbae81e316025f9b94ede453540f2377 done
+2025-05-30T16:44:13: #5 extracting sha256:d1983a67e104e801fceb1850a375a71fe6b62636ba7a8403d9644f308a6a43f9
+2025-05-30T16:44:13: #5 extracting sha256:d1983a67e104e801fceb1850a375a71fe6b62636ba7a8403d9644f308a6a43f9 done
+2025-05-30T16:44:13: #5 extracting sha256:1a0f3a523f04f61db942018321ae122f90d8e3303e243b005e8de9817daf7028
+2025-05-30T16:44:14: #5 extracting sha256:1a0f3a523f04f61db942018321ae122f90d8e3303e243b005e8de9817daf7028 done
+2025-05-30T16:44:14: #5 extracting sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082
+2025-05-30T16:44:17: #5 extracting sha256:f0658fc0d198eeaac6e7eb9a4d408646e2609bf27868916b63071ac38d985082 3.4s done
+2025-05-30T16:44:19: #5 extracting sha256:661aa7a3d7b19ff17718f3ba8d0ff219bffdada0edf7d6f5ff166ecc204e2791
+2025-05-30T16:44:19: #5 extracting sha256:661aa7a3d7b19ff17718f3ba8d0ff219bffdada0edf7d6f5ff166ecc204e2791 0.5s done
+2025-05-30T16:44:20: #5 extracting sha256:00f885d273aba1d725369716716ea0f680c442ad151b422f6657b4ca36b0f946
+2025-05-30T16:44:22: #5 extracting sha256:00f885d273aba1d725369716716ea0f680c442ad151b422f6657b4ca36b0f946 2.4s done
+2025-05-30T16:44:23: #5 extracting sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d
+2025-05-30T16:44:25: #5 extracting sha256:e2fbc5971987fa88f0142d1fc03dcefc24e5a869b208b5fc9cd1ab16f64d743d 1.7s done
+2025-05-30T16:44:27: #5 extracting sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223
+2025-05-30T16:44:29: #5 extracting sha256:1735122ca52642e993034ae58c7ddf4e180b08fdd4552498493dd2dffa090223 1.8s done
+2025-05-30T16:44:31: #5 extracting sha256:0efe336792bcc951e3a6677f410e0fa7c53c6036fbeef519476ba1f871a5835d
+2025-05-30T16:44:31: #5 extracting sha256:0efe336792bcc951e3a6677f410e0fa7c53c6036fbeef519476ba1f871a5835d 0.0s done
+2025-05-30T16:44:31: #5 extracting sha256:6c47b4786d87e98c1d6fc9cd683620b86b9433bcba892bbf5f02f9760ec4fc6f
+2025-05-30T16:44:31: #5 extracting sha256:6c47b4786d87e98c1d6fc9cd683620b86b9433bcba892bbf5f02f9760ec4fc6f 0.0s done
+2025-05-30T16:44:32: #5 DONE 23.8s
+
+2025-05-30T16:44:32: #6 [ 2/10] RUN mkdir -p $HOME/.cache
+2025-05-30T16:44:32: #6 DONE 0.3s
+
+2025-05-30T16:44:32: #7 [ 3/10] COPY azureml-environment-setup/99brokenproxy /etc/apt/apt.conf.d/
+2025-05-30T16:44:32: #7 DONE 0.1s
+
+2025-05-30T16:44:32: #8 [ 4/10] RUN if dpkg --compare-versions `conda --version | grep -oE '[^ ]+$'` lt 4.4.11; then conda install conda==4.4.11; fi
+2025-05-30T16:44:33: #8 DONE 0.7s
+
+2025-05-30T16:44:33: #9 [ 5/10] COPY azureml-environment-setup/mutated_conda_dependencies.yml azureml-environment-setup/mutated_conda_dependencies.yml
+2025-05-30T16:44:33: #9 DONE 0.1s
+
+2025-05-30T16:44:33: #10 [ 6/10] RUN ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_9e40e1608a8f5c94a3177eefb4f71a16 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf "$HOME/.cache/pip" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf "$CONDA_ROOT_DIR/pkgs" && find "$CONDA_ROOT_DIR" -type d -name __pycache__ -exec rm -rf {} + && ldconfig
+2025-05-30T16:46:11: #10 1.869 Solving environment: ...working... failed
+2025-05-30T16:46:11: #10 97.83 
+2025-05-30T16:46:11: #10 97.83 CondaValueError: Malformed version string '~': invalid character(s).
+2025-05-30T16:46:11: #10 97.83 
+2025-05-30T16:46:15: #10 ERROR: process "/bin/sh -c ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_9e40e1608a8f5c94a3177eefb4f71a16 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf \"$HOME/.cache/pip\" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf \"$CONDA_ROOT_DIR/pkgs\" && find \"$CONDA_ROOT_DIR\" -type d -name __pycache__ -exec rm -rf {} + && ldconfig" did not complete successfully: exit code: 1
+2025-05-30T16:46:15: ------
+2025-05-30T16:46:15:  > [ 6/10] RUN ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_9e40e1608a8f5c94a3177eefb4f71a16 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf "$HOME/.cache/pip" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf "$CONDA_ROOT_DIR/pkgs" && find "$CONDA_ROOT_DIR" -type d -name __pycache__ -exec rm -rf {} + && ldconfig:
+2025-05-30T16:46:15: failed
+2025-05-30T16:46:15: 97.83 
+2025-05-30T16:46:15: 97.83 CondaValueError: Malformed version string '~': invalid character(s).
+2025-05-30T16:46:15: 97.83 
+2025-05-30T16:46:15: ------
+2025-05-30T16:46:15: Dockerfile:8
+2025-05-30T16:46:15: --------------------
+2025-05-30T16:46:15:    6 |     RUN if dpkg --compare-versions `conda --version | grep -oE '[^ ]+$'` lt 4.4.11; then conda install conda==4.4.11; fi
+2025-05-30T16:46:15:    7 |     COPY azureml-environment-setup/mutated_conda_dependencies.yml azureml-environment-setup/mutated_conda_dependencies.yml
+2025-05-30T16:46:15:    8 | >>> RUN ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_9e40e1608a8f5c94a3177eefb4f71a16 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf "$HOME/.cache/pip" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf "$CONDA_ROOT_DIR/pkgs" && find "$CONDA_ROOT_DIR" -type d -name __pycache__ -exec rm -rf {} + && ldconfig
+2025-05-30T16:46:15:    9 |     # AzureML Conda environment name: azureml_9e40e1608a8f5c94a3177eefb4f71a16
+2025-05-30T16:46:15:   10 |     ENV PATH /azureml-envs/azureml_9e40e1608a8f5c94a3177eefb4f71a16/bin:$PATH
+2025-05-30T16:46:15: --------------------
+2025-05-30T16:46:15: ERROR: failed to solve: process "/bin/sh -c ldconfig /usr/local/cuda/lib64/stubs && conda env create -p /azureml-envs/azureml_9e40e1608a8f5c94a3177eefb4f71a16 -f azureml-environment-setup/mutated_conda_dependencies.yml && rm -rf \"$HOME/.cache/pip\" && conda clean -aqy && CONDA_ROOT_DIR=$(conda info --root) && rm -rf \"$CONDA_ROOT_DIR/pkgs\" && find \"$CONDA_ROOT_DIR\" -type d -name __pycache__ -exec rm -rf {} + && ldconfig" did not complete successfully: exit code: 1
+
+
+2025-05-30T16:46:15: CalledProcessError(1, ['docker', 'build', '-f', 'azureml-environment-setup/Dockerfile', '.', '-t', 'b7b312deda7f44b5867e093d778498bd.azurecr.io/azureml/azureml_d7b5eabf216e7f631ba854da89e012f6', '-t', 'b7b312deda7f44b5867e093d778498bd.azurecr.io/azureml/azureml_d7b5eabf216e7f631ba854da89e012f6:1'])
+
+2025-05-30T16:46:15: Building docker image failed with exit code: 1
+
+2025-05-30T16:46:15: Logging out of Docker registry: b7b312deda7f44b5867e093d778498bd.azurecr.io
+2025-05-30T16:46:15: Removing login credentials for https://index.docker.io/v1/
+
+
+2025-05-30T16:46:15: Traceback (most recent call last):
+  File "/mnt/azureml/cr/j/ce267d98d38b40b19aee7f50e2cf608c/exe/wd/docker_utilities.py", line 152, in _docker_build_or_error
+    docker_execute_function(docker_command, build_command, print_command_args=True)
+  File "/mnt/azureml/cr/j/ce267d98d38b40b19aee7f50e2cf608c/exe/wd/docker_utilities.py", line 23, in docker_execute_function
+    return killable_subprocess.check_call(command_args, *popen_args,
+  File "/mnt/azureml/cr/j/ce267d98d38b40b19aee7f50e2cf608c/exe/wd/killable_subprocess.py", line 261, in check_call
+    raise subprocess.CalledProcessError(process.returncode, cmd)
+subprocess.CalledProcessError: Command '['docker', 'build', '-f', 'azureml-environment-setup/Dockerfile', '.', '-t', 'b7b312deda7f44b5867e093d778498bd.azurecr.io/azureml/azureml_d7b5eabf216e7f631ba854da89e012f6', '-t', 'b7b312deda7f44b5867e093d778498bd.azurecr.io/azureml/azureml_d7b5eabf216e7f631ba854da89e012f6:1']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "script.py", line 162, in <module>
+    docker_utilities._docker_build_or_error(
+  File "/mnt/azureml/cr/j/ce267d98d38b40b19aee7f50e2cf608c/exe/wd/docker_utilities.py", line 156, in _docker_build_or_error
+    _write_error_and_exit(error_msg, error_file_path=error_file_path)
+  File "/mnt/azureml/cr/j/ce267d98d38b40b19aee7f50e2cf608c/exe/wd/docker_utilities.py", line 217, in _write_error_and_exit
+    sys.exit(1)
+SystemExit: 1
+

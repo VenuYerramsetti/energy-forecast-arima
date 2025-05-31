@@ -1,14 +1,11 @@
 name: arima-env
+channels:
+  - conda-forge
+  - defaults
 dependencies:
-  - python=3.9
+  - python=3.8
+  - pandas
+  - matplotlib
   - pip
   - pip:
-      - pandas
-      - matplotlib
       - pmdarima
-      - scikit-learn
-      - statsmodels
-      - joblib
-      - azureml-core
-      - azure-ai-ml
-      - azure-identity

@@ -1,0 +1,10 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+command: python energy_forecast_arima.py
+code: .
+environment: azureml:arima-env:4
+compute: azureml:arima-instance
+experiment_name: energy-forecast-arima
+description: ARIMA forecasting job
+outputs:
+  output_dir:
+    type: uri_folder

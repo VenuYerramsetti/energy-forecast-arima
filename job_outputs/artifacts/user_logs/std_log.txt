@@ -1,0 +1,44 @@
+Performing stepwise search to minimize aic
+ ARIMA(2,1,2)(1,1,1)[12]             : AIC=526.837, Time=1.00 sec
+ ARIMA(0,1,0)(0,1,0)[12]             : AIC=659.245, Time=0.05 sec
+ ARIMA(1,1,0)(1,1,0)[12]             : AIC=560.558, Time=0.11 sec
+ ARIMA(0,1,1)(0,1,1)[12]             : AIC=529.539, Time=0.16 sec
+ ARIMA(2,1,2)(0,1,1)[12]             : AIC=525.356, Time=0.77 sec
+ ARIMA(2,1,2)(0,1,0)[12]             : AIC=551.838, Time=0.20 sec
+ ARIMA(2,1,2)(0,1,2)[12]             : AIC=526.365, Time=1.64 sec
+ ARIMA(2,1,2)(1,1,0)[12]             : AIC=530.219, Time=0.73 sec
+ ARIMA(2,1,2)(1,1,2)[12]             : AIC=inf, Time=2.17 sec
+ ARIMA(1,1,2)(0,1,1)[12]             : AIC=527.568, Time=0.77 sec
+ ARIMA(2,1,1)(0,1,1)[12]             : AIC=529.582, Time=0.49 sec
+ ARIMA(3,1,2)(0,1,1)[12]             : AIC=520.313, Time=0.55 sec
+ ARIMA(3,1,2)(0,1,0)[12]             : AIC=544.911, Time=0.25 sec
+ ARIMA(3,1,2)(1,1,1)[12]             : AIC=521.966, Time=0.83 sec
+ ARIMA(3,1,2)(0,1,2)[12]             : AIC=521.645, Time=1.47 sec
+ ARIMA(3,1,2)(1,1,0)[12]             : AIC=526.036, Time=0.70 sec
+ ARIMA(3,1,2)(1,1,2)[12]             : AIC=523.456, Time=1.88 sec
+ ARIMA(3,1,1)(0,1,1)[12]             : AIC=523.535, Time=0.42 sec
+ ARIMA(4,1,2)(0,1,1)[12]             : AIC=521.961, Time=1.38 sec
+ ARIMA(3,1,3)(0,1,1)[12]             : AIC=522.196, Time=0.70 sec
+ ARIMA(2,1,3)(0,1,1)[12]             : AIC=523.490, Time=0.68 sec
+ ARIMA(4,1,1)(0,1,1)[12]             : AIC=519.977, Time=0.46 sec
+ ARIMA(4,1,1)(0,1,0)[12]             : AIC=550.220, Time=0.14 sec
+ ARIMA(4,1,1)(1,1,1)[12]             : AIC=521.444, Time=0.67 sec
+ ARIMA(4,1,1)(0,1,2)[12]             : AIC=520.895, Time=1.41 sec
+ ARIMA(4,1,1)(1,1,0)[12]             : AIC=526.881, Time=0.40 sec
+ ARIMA(4,1,1)(1,1,2)[12]             : AIC=522.866, Time=1.93 sec
+ ARIMA(4,1,0)(0,1,1)[12]             : AIC=524.721, Time=0.27 sec
+ ARIMA(5,1,1)(0,1,1)[12]             : AIC=521.974, Time=0.61 sec
+ ARIMA(3,1,0)(0,1,1)[12]             : AIC=529.910, Time=0.31 sec
+ ARIMA(5,1,0)(0,1,1)[12]             : AIC=524.411, Time=0.53 sec
+ ARIMA(5,1,2)(0,1,1)[12]             : AIC=523.494, Time=1.52 sec
+ ARIMA(4,1,1)(0,1,1)[12] intercept   : AIC=520.121, Time=1.21 sec
+
+Best model:  ARIMA(4,1,1)(0,1,1)[12]          
+Total fit time: 26.445 seconds
+✅ Output files saved to the 'outputs/' directory:
+ - original_energy_data.csv
+ - forecast_only.csv
+ - energy_forecast.csv
+ - original_energy_consumption.png
+ - energy_forecast_plot.png
+ - arima_model_summary.txt
