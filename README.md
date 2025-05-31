@@ -1,5 +1,3 @@
-
-```markdown
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Last Commit](https://img.shields.io/github/last-commit/VenuYerramsetti/energy-forecast-arima)
@@ -36,13 +34,13 @@ This project forecasts monthly energy usage using **Seasonal ARIMA (SARIMA)** mo
 
 ## 🧠 Technologies Used
 
-| Area          | Tool               |
-| ------------- | ------------------ |
-| Forecasting   | Python, pmdarima   |
-| Data Wrangling| pandas             |
-| Visualization | matplotlib, Power BI |
-| Deployment    | Azure-compatible output |
-| Version Control | Git + GitHub     |
+| Area           | Tool                  |
+|----------------|-----------------------|
+| Forecasting    | Python, pmdarima      |
+| Data Wrangling | pandas                |
+| Visualization  | matplotlib, Power BI  |
+| Deployment     | Azure-compatible output |
+| Version Control| Git + GitHub          |
 
 ---
 
@@ -52,12 +50,12 @@ After running the script, these files are generated:
 
 ```
 
-energy\_forecast.csv           # Combined forecast + historical data
-forecast\_only.csv             # Forecasted values only
-original\_energy\_data.csv      # Original dataset
-energy\_forecast\_plot.png      # Forecast plot with confidence intervals
-original\_energy\_consumption.png  # Historical consumption plot
-energy\_forecast.pbix          # Power BI Dashboard file
+energy\_forecast.csv             # Combined forecast + historical data
+forecast\_only.csv               # Forecasted values only
+original\_energy\_data.csv        # Original dataset
+energy\_forecast\_plot.png        # Forecast plot with confidence intervals
+original\_energy\_consumption.png # Historical consumption plot
+energy\_forecast.pbix            # Power BI Dashboard file
 
 ````
 
@@ -157,5 +155,4 @@ git commit -m "🔄 Updated forecasting script, Power BI dashboard, and outputs"
 # Push to GitHub
 git push origin main
 ```
-
 
